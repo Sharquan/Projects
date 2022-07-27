@@ -1,0 +1,57 @@
+
+import javax.swing.JOptionPane;
+
+public class HW2p1
+ {
+
+public static void main(String[]args){
+//variables
+   int q1 = 0;
+   int q2 = 0;
+   int q3 = 0;
+   int q4 = 0;
+   int q5 = 0;
+   int con = 0;
+   int count = 0;
+   //do while + loop
+do
+{
+ q1 = JOptionPane.showConfirmDialog(null," Are you the son of ZEUS?");
+ q2 = JOptionPane.showConfirmDialog(null," Are you the son of HERA?");
+ q3 = JOptionPane.showConfirmDialog(null," Can you be burned by fire?");
+ q4 = JOptionPane.showConfirmDialog(null," Did you kill a monster?");
+ q5 = JOptionPane.showConfirmDialog(null," Did you win a battle?");
+ //Note to self || = Or && = And ! = Not
+ if ((q1 == 0) && (q2 ==0))
+  {
+    System.out.println( " Ah you're Ares");
+  }
+  else if (( q1 == 0) && (q4 == 0))
+  {
+    System.out.println (" ah you're hercules ");
+  }
+  else if (( q4 == 0) || (q5 == 0))
+  {
+    System.out.println("Ah you're the Master Warrior");
+  }
+  else if ( q3 != 0)
+  {
+    System.out.println(" You're OTOS");
+  }
+  else
+  {
+   System.out.println(" You are but a lost soul it seems");
+  }
+  //continue statement
+ con = JOptionPane.showConfirmDialog(null," Do you want to plag again?");
+ // i attempted to make a method counter method but i wasnt able to get it working but i do know if i did count++; it would normally just count up
+ // so could i get feedback as to why it wasnt counting upwards?
+ count = HW2Method.counter(count);
+}
+
+while (con == 0);
+
+   System.out.println("You've played " + count + " Times");
+
+}
+}
